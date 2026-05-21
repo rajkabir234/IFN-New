@@ -1,3 +1,7 @@
+ 'use client';
+
+import React from 'react';
+import Image from 'next/image';
 import { FaExternalLinkAlt, FaGlobe } from 'react-icons/fa';
 import AnimatedSection from './AnimatedSection';
 
@@ -7,6 +11,8 @@ const initiatives = [
     description:
       "Nepal's largest annual digital conference unites ministers, government officials, IT professionals, entrepreneurs, and academics to advance the Digital Nepal Framework. Each edition focuses on a forward-looking theme, bringing together 15+ international keynote speakers alongside hundreds of national delegates.",
     website: 'digitalconclave.org',
+    href: 'https://digitalconclave.org',
+    logo: 'digital-nepal-logo.png',
     accent: 'from-blue-500 to-blue-700',
   },
   {
@@ -14,6 +20,8 @@ const initiatives = [
     description:
       'A multi-edition dialogue series aligning stakeholders with the Digital Nepal vision. Beginning as a virtual initiative during Nepal\'s first lockdown, it grew into province-level physical gatherings — Digital Pradesh Samvad — across all seven provinces.',
     website: 'digitalsamvad.org',
+    href: 'https://digitalsamvad.org',
+    logo: 'digital-samvad.png',
     accent: 'from-purple-500 to-purple-700',
   },
   {
@@ -21,6 +29,8 @@ const initiatives = [
     description:
       'An annual, province-wide startup showcase that has grown from a regional pilot to a national movement spanning all seven provinces. Shortlisted startups compete in Kathmandu finals featuring bootcamps, mentoring, exhibitions, and the coveted ICT Award.',
     website: 'startupnepal.org',
+    href: 'https://startupnepal.org',
+    logo: 'startup-idea-fest.png',
     accent: 'from-red-500 to-red-700',
     stats: '15,000+ attendees · 100+ startups showcased',
   },
@@ -29,6 +39,8 @@ const initiatives = [
     description:
       'Organized in collaboration with the Karnali Province Government to align local digital policies with national strategies. The 2025 edition in Birendranagar, Surkhet drew 500+ attendees and 50+ expert speakers.',
     website: 'digitalkarnali.org',
+    href: 'https://digitalkarnali.org',
+    logo: 'digital-karnali.png',
     accent: 'from-teal-500 to-teal-700',
   },
   {
@@ -36,27 +48,50 @@ const initiatives = [
     description:
       'The inaugural edition, held in Bardibas, Mahottari, marked a significant step toward advancing Madhesh Province\'s digital agenda. Co-organized with the Ministry of Home Affairs, Communication & Law.',
     website: 'madhesh.digital',
+    href: 'https://madhesh.digital',
+    logo: 'digital-madhesh.png',
     accent: 'from-orange-500 to-orange-700',
   },
   {
     title: 'ICT Gyan',
     description:
       'A digital literacy program that promotes technology education in native languages across Nepal, empowering students, local communities, and government representatives. 15 sessions conducted nationwide to date.',
+    href: '#initiatives',
+    logo: 'ict-gyan.png',
     accent: 'from-emerald-500 to-emerald-700',
   },
   {
     title: 'Digital Literacy Campaign — Nagarik App (2024)',
     description:
       'Implemented across all seven provinces through 15 physical sessions, this campaign promotes citizen-centric digital services and drives public adoption of the Government of Nepal\'s Nagarik App.',
+    href: '#initiatives',
+    logo: 'nagarik-campaign.png',
     accent: 'from-cyan-500 to-cyan-700',
   },
   {
     title: 'Digital Leadership Dialogue 1.0 & 2.0',
     description:
       'Two physical and seven virtual sessions organized ahead of the 2082 elections, engaging key stakeholders in conversations on digital policy and leadership.',
+    href: '#initiatives',
+    logo: 'digital-leadership.png',
     accent: 'from-indigo-500 to-indigo-700',
   },
 ];
+
+const initiativeLogos = initiatives.map((item) => ({
+  title: item.title,
+  href: item.href,
+  initials: item.title
+    .split(' ')
+    .filter(Boolean)
+    .slice(0, 2)
+    .map((part) => part[0])
+    .join('')
+    .toUpperCase(),
+  color: item.accent,
+  external: item.website !== undefined,
+  logo: (item as any).logo,
+}));
 
 const conclaveHistory = [
   {
@@ -86,6 +121,11 @@ const conclaveHistory = [
 ];
 
 export default function InitiativesSection() {
+  // Duplicate logos and use a CSS marquee that translates by 50% (one copy)
+  const doubled = initiativeLogos.concat(initiativeLogos);
+
+  const durationSeconds = Math.max(12, initiativeLogos.length * 6);
+
   return (
     <AnimatedSection id="initiatives" className="bg-surface">
       <div className="mx-auto mb-4 section-divider" />
@@ -96,6 +136,57 @@ export default function InitiativesSection() {
         From grassroots digital literacy campaigns to Nepal&apos;s largest technology conference,
         our initiatives span every province and reach every level of society.
       </p>
+
+      <div className="mb-14 overflow-hidden rounded-3xl bg-white shadow-sm">
+        <div className="border-b border-gray-100 px-6 py-5">
+          <h3 className="text-lg font-semibold text-body-text">Featured initiative logos</h3>
+          <p className="mt-1 text-sm text-body-text/60">
+            Scroll through the logos below and click to visit the initiative website or learn more.
+          </p>
+        </div>
+
+        <div className="overflow-hidden px-6 py-6">
+          <div
+            className="ifn-marquee relative"
+            aria-hidden={false}
+          >
+            <div
+              className="ifn-marquee-track flex"
+              style={{ animation: `ifn-scroll ${durationSeconds}s linear infinite` }}
+            >
+              {doubled.map((item, idx) => (
+                <a
+                  key={item.title + '-' + idx}
+                  href={item.href}
+                  target={item.external ? '_blank' : undefined}
+                  rel={item.external ? 'noopener noreferrer' : undefined}
+                  aria-label={item.title}
+                  className="w-screen flex-none flex items-center justify-center"
+                >
+                  {item.logo ? (
+                    <div className="h-28 w-3/4 flex items-center justify-center">
+                      <Image
+                        src={`/images/${item.logo}`}
+                        alt={item.title}
+                        width={520}
+                        height={160}
+                        className="object-contain"
+                      />
+                    </div>
+                  ) : (
+                    <div className={`h-28 w-28 rounded-3xl bg-gradient-to-br ${item.color} flex items-center justify-center text-4xl font-bold text-white`}>{item.initials}</div>
+                  )}
+                </a>
+              ))}
+            </div>
+          </div>
+          <style>{`
+            .ifn-marquee-track { gap: 1rem; }
+            .ifn-marquee-track > a { flex: 0 0 100vw; }
+            @keyframes ifn-scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+          `}</style>
+        </div>
+      </div>
 
       {/* Digital Nepal Conclave History Table */}
       {/* <div className="mb-14 overflow-hidden rounded-2xl bg-white shadow-sm">
@@ -140,47 +231,30 @@ export default function InitiativesSection() {
         </div>
       </div> */}
 
-      {/* All Initiatives */}
-      <div className="grid gap-6 md:grid-cols-2">
+      <div className="grid gap-6 grid-cols-2 md:grid-cols-4">
         {initiatives.map((init, i) => (
-          <div
+          <a
             key={init.title}
-            className="card-hover group relative flex overflow-hidden rounded-2xl bg-white shadow-sm"
+            href={init.href}
+            target={init.website ? '_blank' : undefined}
+            rel={init.website ? 'noopener noreferrer' : undefined}
+            aria-label={init.title}
+            className="card-hover group flex items-center justify-center overflow-hidden rounded-2xl bg-white shadow-sm p-6"
           >
-            {/* Left accent side */}
-            <div className={`relative flex w-20 shrink-0 flex-col items-center justify-center bg-gradient-to-br ${init.accent} py-6`}>
-              <div className="absolute inset-0 bg-white/5" aria-hidden="true" />
-              <div className="absolute -bottom-4 -left-4 h-20 w-20 rounded-full bg-white/10" aria-hidden="true" />
-              <span className="relative text-2xl font-extrabold text-white/90">{String(i + 1).padStart(2, '0')}</span>
-            </div>
-
-            {/* Content */}
-            <div className="flex flex-1 flex-col justify-center p-6">
-              <h3 className="mb-2 text-lg font-bold text-body-text transition-colors group-hover:text-primary">{init.title}</h3>
-              <p className="text-sm leading-relaxed text-body-text/60">{init.description}</p>
-              <div className="mt-3 flex flex-wrap items-center gap-3">
-                {init.stats && (
-                  <span className="inline-flex items-center gap-1.5 rounded-full bg-accent/5 px-3 py-1 text-xs font-semibold text-accent">
-                    <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
-                    </svg>
-                    {init.stats}
-                  </span>
-                )}
-                {init.website && (
-                  <a
-                    href={`https://${init.website}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 text-xs font-semibold text-primary/50 transition-colors hover:text-primary"
-                  >
-                    <FaGlobe className="h-3 w-3" />
-                    {init.website}
-                  </a>
-                )}
+            {init.logo ? (
+              <div className="h-20 w-full flex items-center justify-center">
+                <Image
+                  src={`/images/${init.logo}`}
+                  alt={init.title}
+                  width={320}
+                  height={120}
+                  className="object-contain"
+                />
               </div>
-            </div>
-          </div>
+            ) : (
+              <div className={`h-20 w-20 rounded-2xl bg-gradient-to-br ${init.accent} flex items-center justify-center text-2xl font-bold text-white`}>{String(i + 1)}</div>
+            )}
+          </a>
         ))}
       </div>
     </AnimatedSection>

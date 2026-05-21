@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 600" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1">
+      <stop offset="0" stop-color="#0E2557" />
+      <stop offset="1" stop-color="#1a3a7a" />
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="600" fill="url(#g)" />
+  <g fill="#fff" opacity="0.08">
+    <circle cx="200" cy="120" r="120" />
+    <circle cx="1400" cy="480" r="200" />
+  </g>
+  <g fill="#fff">
+    <text x="80" y="220" font-family="Poppins, Arial, sans-serif" font-size="56" font-weight="700">Google Career Certificates</text>
+    <text x="80" y="300" font-family="Poppins, Arial, sans-serif" font-size="28">Fully funded scholarships for learners across Nepal</text>
+  </g>
+</svg>

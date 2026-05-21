@@ -1,4 +1,6 @@
 import { FaFacebookF, FaTwitter, FaLinkedinIn } from 'react-icons/fa';
+import { FaInstagram, FaX } from 'react-icons/fa6';
+import Fa from 'zod/v4/locales/fa.js';
 
 const initiativeLinks = [
   { label: 'Digital Nepal Conclave', url: 'https://digitalconclave.org' },
@@ -9,12 +11,12 @@ const initiativeLinks = [
 ];
 
 const quickLinks = [
-  { label: 'About Us', href: '#about' },
-  { label: 'Programs & Initiatives', href: '#initiatives' },
-  { label: 'Publications', href: '#publications' },
-  { label: 'Our Reach', href: '#reach' },
-  { label: 'Collaborators', href: '#collaborators' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'About Us', href: '/#about' },
+  { label: 'Programs & Initiatives', href: '/#initiatives' },
+  { label: 'Publications', href: '/#publications' },
+  { label: 'Our Reach', href: '/#reach' },
+  { label: 'Collaborators', href: '/#collaborators' },
+  { label: 'Contact', href: '/#contact' },
 ];
 
 export default function Footer() {
@@ -104,7 +106,7 @@ export default function Footer() {
                 aria-label="Twitter"
                 className="flex h-10 w-10 items-center justify-center rounded-xl bg-white/5 text-white/50 transition-all hover:bg-white/10 hover:text-white"
               >
-                <FaTwitter className="h-4 w-4" />
+                <FaInstagram className="h-4 w-4" />
               </a>
               <a
                 href="https://linkedin.com"
