@@ -19,6 +19,7 @@ const securityHeaders = [
       "font-src 'self' https://fonts.gstatic.com",
       "img-src 'self' data:",
       "connect-src 'self'",
+      "frame-src 'self' https://www.google.com",
     ].join("; "),
   },
   // HSTS — force HTTPS (only if served over HTTPS)
