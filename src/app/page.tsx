@@ -1,9 +1,9 @@
 import Header from '@/components/Header';
 import HeroSection from '@/components/HeroSection';
-//import AboutSection from '@/components/AboutSection';
+import AboutSection from '@/components/AboutSection';
 import InitiativesSection from '@/components/InitiativesSection';
 import PublicationsSection from '@/components/PublicationsSection';
-// import ReachSection from '@/components/ReachSection';
+import ReachSection from '@/components/ReachSection';
 import CollaboratorsSection from '@/components/CollaboratorsSection';
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';

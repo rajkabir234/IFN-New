@@ -92,7 +92,7 @@ export default function HeroSection() {
       </div>
 
       {/* Featured Initiatives */}
-      <AnimatedSection className="bg-surface" id="initiatives">
+      {/* <AnimatedSection className="bg-surface" id="initiatives">
         <div className="mx-auto mb-4 section-divider" />
         <h2 className="mb-4 text-center text-3xl font-bold text-primary md:text-[32px]">
           Featured Initiatives
@@ -125,7 +125,7 @@ export default function HeroSection() {
             </Link>
           ))}
         </div>
-      </AnimatedSection>
+      </AnimatedSection> */}
     </>
   );
 }

@@ -1,4 +1,5 @@
-import { FiDownload, FiExternalLink } from 'react-icons/fi';
+import { FiDownload, FiExternalLink, FiArrowRight } from 'react-icons/fi';
+import Link from 'next/link';
 import AnimatedSection from './AnimatedSection';
 
 const reports = [
@@ -56,7 +57,7 @@ export default function PublicationsSection() {
               key={report.title}
               className="card-hover group overflow-hidden rounded-2xl bg-white shadow-sm"
             >
-              <div className={`relative flex aspect-[4/3] items-center justify-center bg-gradient-to-br ${report.color}`}>
+              <div className={`relative flex aspect-[3/2] items-center justify-center bg-gradient-to-br ${report.color}`}>
                 <div className="px-8 text-center">
                   <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-xl bg-white/20 backdrop-blur-sm">
                     <FiExternalLink className="h-6 w-6 text-white" />
@@ -74,6 +75,12 @@ export default function PublicationsSection() {
               </div>
             </div>
           ))}
+        </div>
+        <div className="mt-10 flex justify-center">
+          <Link href="/publications" className="inline-flex items-center gap-2 rounded-lg gradient-primary px-6 py-3 text-sm font-semibold text-white shadow-sm shadow-primary/20 transition-all hover:shadow-md hover:shadow-primary/25 hover:brightness-110">
+            See More Publications
+            <FiArrowRight className="h-4 w-4" />
+          </Link>
         </div>
       </div>
 
