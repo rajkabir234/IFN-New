@@ -65,7 +65,7 @@ export default function SlideshowHero({
             transition={{ duration: 0.9, ease: 'easeOut' }}
           />
         </AnimatePresence>
-        <div className="absolute inset-0 bg-black/60" />
+        <div className="absolute inset-0 bg-black/30" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent" />
         <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-black/90 to-transparent" />
       </div>

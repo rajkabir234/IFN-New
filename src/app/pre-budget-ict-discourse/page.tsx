@@ -17,11 +17,11 @@ export default function PreBudgetIctDiscourse() {
           label="Pre-Budget ICT Discourse"
           title="Pre-Budget ICT Discourse"
           description="Annual stakeholder consultation forum discussing ICT sector priorities, budgetary needs, and policy recommendations to guide Nepal's digital development investments."
-          breadcrumbs={[
-            { href: '/', label: 'Home' },
-            { href: '/#initiatives', label: 'Events' },
-            { href: '/events/pre-budget-ict-discourse', label: 'Pre-Budget ICT Discourse' },
-          ]}
+          // breadcrumbs={[
+          //   { href: '/', label: 'Home' },
+          //   { href: '/#initiatives', label: 'Events' },
+          //   { href: '/events/pre-budget-ict-discourse', label: 'Pre-Budget ICT Discourse' },
+          // ]}
           slides={[
             {
               id: 'event-1',

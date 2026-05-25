@@ -1,22 +1,36 @@
 import { FiDownload, FiExternalLink, FiArrowRight } from 'react-icons/fi';
+import Image from 'next/image';
 import Link from 'next/link';
 import AnimatedSection from './AnimatedSection';
 
 const reports = [
   {
-    title: 'Digital Pradesh Paridrishya Vol. 1 & Vol. 2',
+    title: 'Budget Recommendations for Nepal’s Digital Future',
     description: 'Provincial digital capability mapping across all seven provinces',
     color: 'from-blue-600 to-indigo-700',
+    image: '/images/publications/Budget-Recomendation.png',
+    link: 'https://drive.google.com/file/d/YOUR_FILE_ID/view', 
   },
   {
-    title: 'Digital Nepal Conclave Reports (2022–2025)',
+    title: 'eGovernance Assessment & Stocktaking Study',
     description: "Findings and recommendations from Nepal's largest digital conference",
     color: 'from-primary to-primary-dark',
+    image: '/images/publications/eGovernace.jpg',
+    link: 'https://drive.google.com/file/d/YOUR_FILE_ID/view',
   },
   {
-    title: 'Digital Nepal Framework',
+    title: 'Digital Paridisya 1.0',
     description: "Strategic framework report for Nepal's digital transformation",
     color: 'from-teal-600 to-cyan-700',
+    image: '/images/publications/Digital-Paridisya-1.jpeg',
+    link: 'https://drive.google.com/file/d/YOUR_FILE_ID/view',
+  },
+  {
+    title: 'Digital Nepal Conclave 2024',
+    description: "Strategic framework report for Nepal's digital transformation",
+    color: 'from-teal-600 to-cyan-700',
+    image: '/images/publications/DNC-24-report.jpeg',
+    link: 'https://drive.google.com/file/d/YOUR_FILE_ID/view',
   },
 ];
 
@@ -50,20 +64,32 @@ export default function PublicationsSection() {
 
       {/* Reports & Publications */}
       <div className="mb-16">
-        <h3 className="mb-8 text-2xl font-semibold text-body-text">Reports & Publications</h3>
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {/* <h3 className="mb-8 text-2xl font-semibold text-body-text">Reports & Publications</h3> */}
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {reports.map((report) => (
-            <div
+            <a
               key={report.title}
-              className="card-hover group overflow-hidden rounded-2xl bg-white shadow-sm"
+              href={report.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="card-hover group block overflow-hidden rounded-2xl bg-white shadow-sm"
             >
-              <div className={`relative flex aspect-[3/2] items-center justify-center bg-gradient-to-br ${report.color}`}>
-                <div className="px-8 text-center">
-                  <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-xl bg-white/20 backdrop-blur-sm">
-                    <FiExternalLink className="h-6 w-6 text-white" />
+              <div className={`relative flex aspect-[1/1.414] items-center justify-center bg-gradient-to-br ${report.color} overflow-hidden`}>
+                {report.image ? (
+                  <Image
+                    src={report.image}
+                    alt={report.title}
+                    fill
+                    className="object-cover"
+                  />
+                ) : (
+                  <div className="px-8 text-center">
+                    <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-xl bg-white/20 backdrop-blur-sm">
+                      <FiExternalLink className="h-6 w-6 text-white" />
+                    </div>
+                    <h4 className="text-lg font-bold leading-snug text-white">{report.title}</h4>
                   </div>
-                  <h4 className="text-lg font-bold leading-snug text-white">{report.title}</h4>
-                </div>
+                )}
                 <div className="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                   <div className="flex h-14 w-14 items-center justify-center rounded-full bg-white text-primary shadow-lg">
                     <FiExternalLink className="h-6 w-6" />
@@ -73,7 +99,7 @@ export default function PublicationsSection() {
               <div className="p-5">
                 <p className="text-sm leading-relaxed text-body-text/60">{report.description}</p>
               </div>
-            </div>
+            </a>
           ))}
         </div>
         <div className="mt-10 flex justify-center">
@@ -84,7 +110,7 @@ export default function PublicationsSection() {
         </div>
       </div>
 
-      {/* Government Research */}
+      {/* Government Research
       <div>
         <h3 className="mb-8 text-2xl font-semibold text-body-text">Government Research</h3>
         <div className="grid gap-6 md:grid-cols-2">
@@ -105,7 +131,7 @@ export default function PublicationsSection() {
             </div>
           ))}
         </div>
-      </div>
+      </div> */}
     </AnimatedSection>
   );
 }

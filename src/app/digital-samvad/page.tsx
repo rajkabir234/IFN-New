@@ -17,11 +17,11 @@ export default function DigitalSamvad() {
           label="Digital Samvad"
           title="Digital Samvad"
           description="Community engagement initiative promoting digital literacy, internet safety, online rights awareness, and responsible digital citizenship across Nepal."
-          breadcrumbs={[
-            { href: '/', label: 'Home' },
-            { href: '/#initiatives', label: 'Events' },
-            { href: '/events/digital-samvad', label: 'Digital Samvad' },
-          ]}
+          // breadcrumbs={[
+          //   { href: '/', label: 'Home' },
+          //   { href: '/#initiatives', label: 'Events' },
+          //   { href: '/events/digital-samvad', label: 'Digital Samvad' },
+          // ]}
           slides={[
             {
               id: 'event-1',

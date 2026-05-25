@@ -30,7 +30,8 @@ export default function TeamPage() {
               role={m.role}
               bio={m.bio}
               photo={m.photo}
-              twitter={m.twitter}
+              facebook={m.facebook}
+              instagram={m.instagram}
               linkedin={m.linkedin}
             />
           ))}

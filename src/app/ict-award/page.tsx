@@ -13,11 +13,11 @@ export default function IctAward() {
         label="ICT Award"
         title="ICT Award"
         description="Recognition program celebrating excellence in ICT innovation, implementation, and digital transformation in Nepal. Honoring innovators, entrepreneurs, organizations, and projects that demonstrate outstanding contributions to Nepal's digital future."
-        breadcrumbs={[
-          { href: '/', label: 'Home' },
-          { href: '/#initiatives', label: 'Events' },
-          { href: '/events/ict-award', label: 'ICT Award' },
-        ]}
+        // breadcrumbs={[
+        //   { href: '/', label: 'Home' },
+        //   { href: '/#initiatives', label: 'Events' },
+        //   { href: '/events/ict-award', label: 'ICT Award' },
+        // ]}
         slides={[
           {
             id: 'event-1',

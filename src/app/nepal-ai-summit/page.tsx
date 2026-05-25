@@ -17,11 +17,11 @@ export default function NepalAISummit() {
           label="Nepal AI Summit"
           title="Nepal AI Summit"
           description="Asia's leading conference on artificial intelligence bringing together researchers, developers, entrepreneurs, and innovators to discuss AI applications and impact in Nepal and the region."
-          breadcrumbs={[
-            { href: '/', label: 'Home' },
-            { href: '/#initiatives', label: 'Events' },
-            { href: '/events/nepal-ai-summit', label: 'Nepal AI Summit' },
-          ]}
+          // breadcrumbs={[
+          //   { href: '/', label: 'Home' },
+          //   { href: '/#initiatives', label: 'Events' },
+          //   { href: '/events/nepal-ai-summit', label: 'Nepal AI Summit' },
+          // ]}
           slides={[
             {
               id: 'event-1',

@@ -34,18 +34,28 @@ const collaborators = [
 const slides = [
   {
     id: 'hero-1',
-    src: '/images/hero-bg.jpg',
-    alt: 'ICT Foundation Nepal event',
+    src: '/images/hero/hero-1.jpg',
+    alt: '',
   },
   {
     id: 'hero-2',
-    src: '/images/team-hero.svg',
-    alt: 'Team collaborating on digital strategy',
+    src: '/images/hero/hero-2.jpg',
+    alt: '',
   },
   {
     id: 'hero-3',
-    src: '/images/research-cover.jpg',
-    alt: 'Digital development in Nepal',
+    src: '/images/hero/hero-3.jpg',
+    alt: '',
+  },
+  {
+    id: 'hero-4',
+    src: '/images/hero/hero-4.jpg',
+    alt: '',
+  },
+  {
+    id: 'hero-5',
+    src: '/images/hero/hero-5.jpg',
+    alt: '',
   },
 ];
 
@@ -65,7 +75,7 @@ export default function HeroSection() {
 
       {/* Introduction Block */}
       <div className="gradient-primary relative overflow-hidden py-14">
-        <div className="absolute inset-0 bg-dots opacity-30" aria-hidden="true" />
+        <div className="absolute inset-0 bg-dots opacity-20" aria-hidden="true" />
         <div className="relative mx-auto max-w-5xl px-6 text-center">
           <p className="text-lg leading-relaxed font-light text-white/95">
             <b>ICT Foundation Nepal</b>, a non-profit organization aiming to push forward the country’s digital transformation mission through policy-level planning, discussions and ICT initiatives execution in collaboration with central government bodies at local, provincial, and national levels.

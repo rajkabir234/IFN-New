@@ -18,15 +18,15 @@ export default function DigitalKarnaliConclave() {
         label="Digital Karnali Conclave"
         title="Digital Karnali Conclave"
         description="Focused on digital empowerment and development in the Karnali region of Nepal. Bridging the digital divide and fostering innovation in one of Nepal's most dynamic regions."
-        breadcrumbs={[
-          { href: '/', label: 'Home' },
-          { href: '/#initiatives', label: 'Events' },
-          { href: '/digital-karnali-conclave', label: 'Digital Karnali Conclave' },
-        ]}
+        // breadcrumbs={[
+        //   { href: '/', label: 'Home' },
+        //   { href: '/#initiatives', label: 'Events' },
+        //   { href: '/digital-karnali-conclave', label: 'Digital Karnali Conclave' },
+        // ]}
         slides={[
           {
             id: 'event-1',
-            src: '/images/ICTAward.jpg',
+            src: '/images/publications/ICTAward.jpg',
             alt: 'Digital Karnali Conclave event',
           },
           {

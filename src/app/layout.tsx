@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   title: "ICT Foundation Nepal",
   description:
     "Elevating Nepal: Pioneering Digital Progress Together. ICT Foundation Nepal advances digital literacy, research, and innovation.",
-};
+  };
 
 export default function RootLayout({
   children,
@@ -39,7 +39,7 @@ export default function RootLayout({
       lang="en"
       className={`${poppins.variable} ${robotoSlab.variable} ${chivo.variable} h-full antialiased`}
     >
-      <body className="flex min-h-full flex-col font-sans">{children}</body>
+      <body className="flex min-h-full flex-col font-sans" suppressHydrationWarning>{children}</body>
     </html>
   );
 }

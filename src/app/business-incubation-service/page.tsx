@@ -17,11 +17,11 @@ export default function BusinessIncubationService() {
           label="Business Incubation Service"
           title="Business Incubation Service"
           description="Comprehensive incubation program providing mentorship, funding support, infrastructure, and resources to nurture ICT startups from ideation to successful market launch."
-          breadcrumbs={[
-            { href: '/', label: 'Home' },
-            { href: '/#initiatives', label: 'Events' },
-            { href: '/events/business-incubation-service', label: 'Business Incubation Service' },
-          ]}
+          // breadcrumbs={[
+          //   { href: '/', label: 'Home' },
+          //   { href: '/#initiatives', label: 'Events' },
+          //   { href: '/events/business-incubation-service', label: 'Business Incubation Service' },
+          // ]}
           slides={[
             {
               id: 'event-1',

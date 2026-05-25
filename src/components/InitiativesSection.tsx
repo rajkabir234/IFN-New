@@ -7,15 +7,6 @@ import AnimatedSection from './AnimatedSection';
 
 const initiatives = [
   {
-    title: 'Digital Nepal Conclave (2022–2025)',
-    description:
-      "Nepal's largest annual digital conference unites ministers, government officials, IT professionals, entrepreneurs, and academics to advance the Digital Nepal Framework. Each edition focuses on a forward-looking theme, bringing together 15+ international keynote speakers alongside hundreds of national delegates.",
-    website: 'digitalconclave.org',
-    href: '/digital-nepal-conclave',
-    logo: 'dnc-logo.png',
-    accent: 'from-blue-500 to-blue-700',
-  },
-  {
     title: 'Digital Samvad (1.0–4.0)',
     description:
       'A multi-edition dialogue series aligning stakeholders with the Digital Nepal vision. Beginning as a virtual initiative during Nepal\'s first lockdown, it grew into province-level physical gatherings — Digital Pradesh Samvad — across all seven provinces.',
@@ -25,14 +16,13 @@ const initiatives = [
     accent: 'from-purple-500 to-purple-700',
   },
   {
-    title: 'Startup & Idea Fest (2019–Present)',
+    title: 'Digital Nepal Conclave (2022–2025)',
     description:
-      'An annual, province-wide startup showcase that has grown from a regional pilot to a national movement spanning all seven provinces. Shortlisted startups compete in Kathmandu finals featuring bootcamps, mentoring, exhibitions, and the coveted ICT Award.',
-    website: 'startupnepal.org',
-    href: '/startup-nepal',
-    logo: 'snif.png',
-    accent: 'from-red-500 to-red-700',
-    stats: '15,000+ attendees · 100+ startups showcased',
+      "Nepal's largest annual digital conference unites ministers, government officials, IT professionals, entrepreneurs, and academics to advance the Digital Nepal Framework. Each edition focuses on a forward-looking theme, bringing together 15+ international keynote speakers alongside hundreds of national delegates.",
+    website: 'digitalconclave.org',
+    href: '/digital-nepal-conclave',
+    logo: 'dnc-logo.png',
+    accent: 'from-blue-500 to-blue-700',
   },
   {
     title: 'Digital Karnali Conclave (2024–2025)',
@@ -53,20 +43,30 @@ const initiatives = [
     accent: 'from-orange-500 to-orange-700',
   },
   {
+    title: 'ICT Award (2019–Present)',
+    description:
+      'Recognition program celebrating excellence in ICT innovation, implementation, and digital transformation in Nepal. Honoring innovators, entrepreneurs, organizations, and projects that demonstrate outstanding contributions to Nepal\'s digital future.',
+    href: '/ict-award',
+    logo: 'ict-award.png',
+    accent: 'from-cyan-500 to-cyan-700',
+  },
+  {
+    title: 'Startup & Idea Fest (2019–Present)',
+    description:
+      'An annual, province-wide startup showcase that has grown from a regional pilot to a national movement spanning all seven provinces. Shortlisted startups compete in Kathmandu finals featuring bootcamps, mentoring, exhibitions, and the coveted ICT Award.',
+    website: 'startupnepal.org',
+    href: '/startup-nepal',
+    logo: 'snif.png',
+    accent: 'from-red-500 to-red-700',
+    stats: '15,000+ attendees · 100+ startups showcased',
+  },
+  {
     title: 'ICT Gyan',
     description:
       'A digital literacy program that promotes technology education in native languages across Nepal, empowering students, local communities, and government representatives. 15 sessions conducted nationwide to date.',
     href: '/ict-gyan',
     logo: 'ict-gyan-logo.png',
     accent: 'from-emerald-500 to-emerald-700',
-  },
-  {
-    title: 'Digital Literacy Campaign — Nagarik App (2024)',
-    description:
-      'Implemented across all seven provinces through 15 physical sessions, this campaign promotes citizen-centric digital services and drives public adoption of the Government of Nepal\'s Nagarik App.',
-    href: '/nagarik-campaign',
-    logo: 'nagarik-campaign.png',
-    accent: 'from-cyan-500 to-cyan-700',
   },
   {
     title: 'Digital Leadership Dialogue 1.0 & 2.0',
@@ -243,13 +243,23 @@ export default function InitiativesSection() {
           >
             {init.logo ? (
               <div className="h-30 w-full flex items-center justify-center">
-                <Image
-                  src={`/images/${init.logo}`}
-                  alt={init.title}
-                  width={200}
-                  height={100}
-                  className="object-contain"
-                />
+                <div className={
+                  init.title === 'ICT Gyan'
+                    ? 'w-38'
+                    : init.title === 'ICT Award (2019–Present)'
+                    ? 'w-45'
+                    : init.title === 'Digital Madhesh Conclave (2025)'
+                    ? 'w-64'
+                    : ''
+                }>
+                  <Image
+                    src={`/images/${init.logo}`}
+                    alt={init.title}
+                    width={200}
+                    height={100}
+                    className="object-contain w-full"
+                  />
+                </div>
               </div>
             ) : (
               <div className={`h-20 w-20 rounded-2xl bg-gradient-to-br ${init.accent} flex items-center justify-center text-2xl font-bold text-white`}>{String(i + 1)}</div>

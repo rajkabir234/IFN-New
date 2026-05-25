@@ -17,11 +17,11 @@ export default function DigitalLeadershipDialogue() {
           label="Digital Leadership Dialogue"
           title="Digital Leadership Dialogue"
           description="An exclusive executive forum bringing together senior leaders to discuss digital transformation strategies, organizational innovation, and leadership challenges in Nepal's digital economy."
-          breadcrumbs={[
-            { href: '/', label: 'Home' },
-            { href: '/#initiatives', label: 'Events' },
-            { href: '/events/digital-leadership-dialogue', label: 'Digital Leadership Dialogue' },
-          ]}
+          // breadcrumbs={[
+          //   { href: '/', label: 'Home' },
+          //   { href: '/#initiatives', label: 'Events' },
+          //   { href: '/events/digital-leadership-dialogue', label: 'Digital Leadership Dialogue' },
+          // ]}
           slides={[
             {
               id: 'event-1',

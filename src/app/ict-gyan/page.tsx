@@ -17,11 +17,11 @@ export default function IctGyan() {
           label="ICT Gyan"
           title="ICT Gyan"
           description="Comprehensive knowledge-sharing and training platform offering ICT education, professional development, and skill enhancement programs for individuals and organizations."
-          breadcrumbs={[
-            { href: '/', label: 'Home' },
-            { href: '/#initiatives', label: 'Events' },
-            { href: '/events/ict-gyan', label: 'ICT Gyan' },
-          ]}
+          // breadcrumbs={[
+          //   { href: '/', label: 'Home' },
+          //   { href: '/#initiatives', label: 'Events' },
+          //   { href: '/events/ict-gyan', label: 'ICT Gyan' },
+          // ]}
           slides={[
             {
               id: 'event-1',

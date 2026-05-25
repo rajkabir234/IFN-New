@@ -18,11 +18,11 @@ export default function DigitalNepalConclave() {
         label="Digital Nepal Conclave"
         title="Digital Nepal Conclave"
         description="The flagship conclave focusing on digital transformation initiatives and strategies for Nepal's development. Bringing together government officials, industry leaders, and innovators to shape Nepal's digital future."
-        breadcrumbs={[
-          { href: '/', label: 'Home' },
-          { href: '/#initiatives', label: 'Events' },
-          { href: '/digital-nepal-conclave', label: 'Digital Nepal Conclave' },
-        ]}
+        // breadcrumbs={[
+        //   { href: '/', label: 'Home' },
+        //   { href: '/#initiatives', label: 'Events' },
+        //   { href: '/digital-nepal-conclave', label: 'Digital Nepal Conclave' },
+        // ]}
         slides={[
           {
             id: 'event-1',

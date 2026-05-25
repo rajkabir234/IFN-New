@@ -18,11 +18,11 @@ export default function DigitalMadheshConclave() {
         label="Digital Madhesh Conclave"
         title="Digital Madhesh Conclave"
         description="Dedicated to digital innovation and economic development in the Madhesh region. Promoting entrepreneurship and inclusive growth through technology-driven solutions."
-        breadcrumbs={[
-          { href: '/', label: 'Home' },
-          { href: '/#initiatives', label: 'Events' },
-          { href: '/digital-madhesh-conclave', label: 'Digital Madhesh Conclave' },
-        ]}
+        // breadcrumbs={[
+        //   { href: '/', label: 'Home' },
+        //   { href: '/#initiatives', label: 'Events' },
+        //   { href: '/digital-madhesh-conclave', label: 'Digital Madhesh Conclave' },
+        // ]}
         slides={[
           {
             id: 'event-1',
