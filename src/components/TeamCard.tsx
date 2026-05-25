@@ -1,17 +1,19 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa';
 
 type Props = {
   name: string;
   role: string;
   bio: string;
   photo: string;
-  twitter?: string;
+  facebook?: string;
+  instagram?: string;
   linkedin?: string;
 };
 
-export default function TeamCard({ name, role, bio, photo, twitter, linkedin }: Props) {
+export default function TeamCard({ name, role, bio, photo, facebook, instagram, linkedin }: Props) {
   return (
     <motion.article
       initial={{ opacity: 0, y: 24 }}
@@ -22,19 +24,24 @@ export default function TeamCard({ name, role, bio, photo, twitter, linkedin }: 
       className="rounded-xl border border-gray-100 bg-white p-6 text-center shadow-sm transition-shadow duration-300 hover:shadow-lg"
     >
       {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img src={photo} alt={name} className="mx-auto mb-4 h-28 w-28 rounded-full object-cover" />
+      <img src={photo} alt={name} className="mx-auto mb-4 h-50 w-50 rounded-full object-cover" />
       <h3 className="text-lg font-semibold text-[#0E2557]">{name}</h3>
       <p className="mb-3 text-sm text-primary-light">{role}</p>
       <p className="mb-4 text-sm text-gray-600">{bio}</p>
-      <div className="flex items-center justify-center gap-3">
-        {twitter && (
-          <a href={twitter} target="_blank" rel="noopener noreferrer" className="text-sm text-[#0E2557]/70 transition hover:text-primary">
-            Twitter
+      <div className="flex items-center justify-center gap-4">
+        {facebook && (
+          <a href={facebook} target="_blank" rel="noopener noreferrer" className="text-xl text-[#0E2557]/70 transition hover:text-blue-600" aria-label="Facebook">
+            <FaFacebook />
+          </a>
+        )}
+        {instagram && (
+          <a href={instagram} target="_blank" rel="noopener noreferrer" className="text-xl text-[#0E2557]/70 transition hover:text-pink-600" aria-label="Instagram">
+            <FaInstagram />
           </a>
         )}
         {linkedin && (
-          <a href={linkedin} target="_blank" rel="noopener noreferrer" className="text-sm text-[#0E2557]/70 transition hover:text-primary">
-            LinkedIn
+          <a href={linkedin} target="_blank" rel="noopener noreferrer" className="text-xl text-[#0E2557]/70 transition hover:text-blue-700" aria-label="LinkedIn">
+            <FaLinkedin />
           </a>
         )}
       </div>

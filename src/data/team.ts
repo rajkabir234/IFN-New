@@ -4,67 +4,122 @@ export type TeamMember = {
   role: string;
   bio: string;
   photo: string;
-  twitter?: string;
+  facebook?: string;
+  instagram?: string;
   linkedin?: string;
 };
 
 export const teamMembers: TeamMember[] = [
   {
     id: 'razan',
-    name: 'Razan Lamsal ',
+    name: 'Razan Lamsal',
     role: 'Chairperson',
     bio: '',
-    photo: '/images/team-member-1.svg',
+    photo: '/images/team/Razan-Lamsal.jpg',
+    facebook: 'https://facebook.com/',
+    instagram: 'https://instagram.com/',
+    linkedin: 'https://linkedin.com/',
   },
-    {
+  {
     id: 'hempal',
     name: 'Hempal Shrestha',
     role: 'Knowledge Management Specialist',
     bio: '',
-    photo: '/images/team-member-1.svg',
+    photo: '/images/team/Hempal Shrestha.jpg',
+    facebook: 'https://facebook.com/',
+    instagram: 'https://instagram.com/',
+    linkedin: 'https://linkedin.com/',
   },
   {
     id: 'nidesh',
     name: 'Nidesh Maskey',
-    role: 'Technical Lead',
+    role: 'Tech Lead',
     bio: '',
-    photo: '/images/team-member-3.svg',
+    photo: '/images/team/Nidesh-maskey.png',
+    facebook: 'https://facebook.com/',
+    instagram: 'https://instagram.com/',
+    linkedin: 'https://linkedin.com/',
   },
   {
     id: 'sushil',
     name: 'Sushil Pokharel',
     role: '',
     bio: '',
-    photo: '/images/team-member-3.svg',
+    photo: '/images/team/Sushil Pokharel.jpeg',
+    facebook: 'https://facebook.com/',
+    instagram: 'https://instagram.com/',
+    linkedin: 'https://linkedin.com/',
   },
-{
+  {
     id: 'hariram',
     name: 'Hariram Rimal',
     role: '',
     bio: '',
-    photo: '/images/team-member-3.svg',
+    photo: '/images/team/Hariram Rimal.jpg',
+    facebook: 'https://facebook.com/',
+    instagram: 'https://instagram.com/',
+    linkedin: 'https://linkedin.com/',
   },
-{
-    id: 'krishpana',
-    name: 'Krishpana Poudel',
-    role: 'Communications Officer',
+  {
+    id: 'resham',
+    name: 'Resham Bhandari',
+    role: 'Event Manager',
     bio: '',
-    photo: '/images/team-member-3.svg',
+    photo: '/images/team/Resham Bhandari.jpeg',
+    facebook: 'https://facebook.com/',
+    instagram: 'https://instagram.com/',
+    linkedin: 'https://linkedin.com/',
   },
   {
     id: 'sujal',
     name: 'Sujal Bhakta Shrestha',
-    role: 'Project Lead',
+    role: 'Projects & Events',
     bio: '',
-    photo: '/images/team-member-3.svg',
+    photo: '/images/team/Sujal Bhakta Shrestha.jpg',
+    facebook: 'https://facebook.com/',
+    instagram: 'https://instagram.com/',
+    linkedin: 'https://linkedin.com/',
   },
-    {
+  {
+    id: 'krishpana',
+    name: 'Krishpana Poudel',
+    role: 'Communications Officer',
+    bio: '',
+    photo: '/images/team/Krishpana Poudel.jpg',
+    facebook: 'https://facebook.com/',
+    instagram: 'https://instagram.com/',
+    linkedin: 'https://linkedin.com/',
+  },
+  {
+    id: 'rachana',
+    name: 'Rachana Kharel',
+    role: 'Outreach Officer',
+    bio: '',
+    photo: '/images/team/member image.jpg',
+    facebook: 'https://facebook.com/',
+    instagram: 'https://instagram.com/',
+    linkedin: 'https://linkedin.com/',
+  },
+  {
     id: 'kabir',
     name: 'Kabir Rajbanshi',
-    role: 'Creative and Technical Officer',
+    role: 'Tech & Creatives',
     bio: '',
-    photo: '/images/team-member-3.svg',
-  }
+    photo: '/images/team/Kabir Rajbanshi.jpg',
+    facebook: 'https://facebook.com/',
+    instagram: 'https://instagram.com/',
+    linkedin: 'https://linkedin.com/',
+  },
+  {
+    id: 'riya',
+    name: 'Riya Kafle',
+    role: 'Admin & Accounts',
+    bio: '',
+    photo: '/images/team/Riya Kafle.jpg',
+    facebook: 'https://facebook.com/',
+    instagram: 'https://instagram.com/',
+    linkedin: 'https://linkedin.com/',
+  },
 ];
 
 export default teamMembers;

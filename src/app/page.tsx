@@ -2,6 +2,7 @@ import Header from '@/components/Header';
 import HeroSection from '@/components/HeroSection';
 import AboutSection from '@/components/AboutSection';
 import InitiativesSection from '@/components/InitiativesSection';
+import UpcomingEvents from '@/components/UpcomingEventsSection';
 import PublicationsSection from '@/components/PublicationsSection';
 import ReachSection from '@/components/ReachSection';
 import CollaboratorsSection from '@/components/CollaboratorsSection';
@@ -15,10 +16,11 @@ export default function Home() {
       <Header />
       <main>
         <HeroSection />
-        <AboutSection />
+        {/* <AboutSection /> */}
         <InitiativesSection />
+        <UpcomingEvents />
         <PublicationsSection />
-        <ReachSection />
+        {/* <ReachSection /> */}
         {/* <CollaboratorsSection /> */}
         <ContactSection />
       </main>

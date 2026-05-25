@@ -1,4 +1,4 @@
-import Header from '@/components/Header';
+import Header from '@/components/HeaderDark';
 import Footer from '@/components/Footer';
 import BackToTop from '@/components/BackToTop';
 import { ReactNode } from 'react';

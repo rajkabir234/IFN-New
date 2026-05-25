@@ -24,7 +24,7 @@ export default function PatronsGrid() {
             className="rounded-xl border border-gray-100 bg-white p-6 text-center shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={p.photo} alt={p.name} className="mx-auto mb-4 h-28 w-28 rounded-full object-cover" />
+            <img src={p.photo} alt={p.name} className="mx-auto mb-4 h-50 w-50 rounded-full object-cover" />
             <h3 className="text-lg font-semibold text-[#0E2557]">{p.name}</h3>
             <p className="mb-3 text-sm text-primary-light">{p.role}</p>
             <p className="mb-4 text-sm text-gray-600">{p.bio}</p>

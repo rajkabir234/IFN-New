@@ -121,6 +121,7 @@ export default function ContactSection() {
               className="absolute h-0 w-0 overflow-hidden opacity-0"
               style={{ position: 'absolute' }}
             />
+            <h3 className="mb-5 text-xl font-bold gradient-text-primary">Leave us a message</h3>
             <div>
               <label htmlFor="name" className="mb-2 block text-sm font-medium text-body-text/80">
                 Name *
@@ -174,7 +175,7 @@ export default function ContactSection() {
                 id="message"
                 rows={5}
                 {...register('message')}
-                className="w-full resize-none rounded-xl border border-gray-200 bg-gray-50/50 px-4 py-3 text-[15px] transition-all focus:border-primary focus:bg-white"
+                className="w-full resize-none rounded-xl border border-gray-200 bg-gray-50/50 px-4 py-10 text-[15px] transition-all focus:border-primary focus:bg-white"
               />
               {errors.message && (
                 <p className="mt-1.5 text-sm text-red-500">{errors.message.message}</p>
@@ -209,22 +210,13 @@ export default function ContactSection() {
               <div className="space-y-5 text-[15px] text-body-text">
                 <div className="flex items-start gap-4">
                   <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-primary/5 text-primary">
-                    <FaMapMarkerAlt className="h-4 w-4" />
-                  </div>
-                  <div>
-                    <p className="font-semibold text-body-text">Address</p>
-                    <p className="text-body-text/65">New Baneshwor, Kathmandu, Nepal</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-primary/5 text-primary">
                     <FaPhone className="h-4 w-4" />
                   </div>
                   <div>
                     <p className="font-semibold text-body-text">Phone</p>
-                    <p className="text-body-text/65">+977-9851141348</p>
-                    <p className="text-body-text/65">+977-9801263604</p>
-                    <p className="text-body-text/65">+977-9801263601</p>
+                    <p className="text-body-text/65">+977-9851141348 | +977-9801263604 | +977-9801263601</p>
+                    {/* <p className="text-body-text/65">+977-9801263604</p>
+                    <p className="text-body-text/65">+977-9801263601</p> */}
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
@@ -233,9 +225,60 @@ export default function ContactSection() {
                   </div>
                   <div>
                     <p className="font-semibold text-body-text">Email</p>
-                    <a href="mailto:admin@ictfoundation.org.np" className="text-primary hover:underline">admin@ictfoundation.org.np</a>
+                    <p className="text-body-text/65">
+                      <a href="mailto:admin@ictfoundation.org.np" className="text-primary hover:underline">admin@ictfoundation.org.np</a>
+                      <br />
+                      <a href="mailto:razan@ictfoundation.org.np" className="text-primary hover:underline">razan@ictfoundation.org.np</a>
+                    </p>
                   </div>
                 </div>
+                <div className="flex items-start gap-4">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-primary/5 text-primary">
+                    <FaMapMarkerAlt className="h-4 w-4" />
+                  </div>
+                  <div>
+                    <p className="font-semibold text-body-text">Address</p>
+                    <p className="text-body-text/65">Sankhamul, Kathmandu-31, Nepal</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Google Maps */}
+              <div className="mt-8">
+                <div>
+                  <h3 className="mb-5 text-xl font-bold gradient-text-primary">Our Location</h3>
+                </div>
+                
+                {/* FIX: Replaced md:h-full with md:h-96 so it has a defined height on desktop */}
+                <div className="relative h-64 md:h-96 w-full">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14133.0232490333!2d85.3320015!3d27.6838239!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1900617307fd%3A0x77c2e1e07ddd81f2!2sICT%20Foundation%20Nepal!5e0!3m2!1sen!2snp!4v1700000000000!5m2!1sen!2snp"
+                    width="100%"
+                    height="100%" /* FIX: Changed from 300% to 100% */
+                    style={{ border: 0 }}
+                    allowFullScreen={true}
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="ICT Foundation Nepal Location"
+                    className="absolute inset-0"
+                    aria-hidden="false"
+                  ></iframe>
+                  
+                  <a 
+                    href="https://maps.app.goo.gl/zA9eyDDWd8wHN6uXA" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="absolute bottom-4 right-4 bg-white text-blue-700 hover:bg-blue-50 px-4 py-2 rounded-md shadow-lg text-sm font-medium flex items-center gap-2 transition-colors"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                    View on Google Maps
+                  </a>
+                </div>
+              </div>
+              
+              {/* <div className="space-y-5 text-[15px] text-body-text">
                 <div className="flex items-start gap-4">
                   <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-primary/5 text-primary">
                     <FaGlobe className="h-4 w-4" />
@@ -252,7 +295,7 @@ export default function ContactSection() {
                     </a>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

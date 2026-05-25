@@ -7,40 +7,30 @@ import AnimatedSection from './AnimatedSection';
 
 const initiatives = [
   {
-    title: 'Digital Nepal Conclave (2022–2025)',
-    description:
-      "Nepal's largest annual digital conference unites ministers, government officials, IT professionals, entrepreneurs, and academics to advance the Digital Nepal Framework. Each edition focuses on a forward-looking theme, bringing together 15+ international keynote speakers alongside hundreds of national delegates.",
-    website: 'digitalconclave.org',
-    href: 'https://digitalconclave.org',
-    logo: 'digital-nepal-logo.png',
-    accent: 'from-blue-500 to-blue-700',
-  },
-  {
     title: 'Digital Samvad (1.0–4.0)',
     description:
       'A multi-edition dialogue series aligning stakeholders with the Digital Nepal vision. Beginning as a virtual initiative during Nepal\'s first lockdown, it grew into province-level physical gatherings — Digital Pradesh Samvad — across all seven provinces.',
     website: 'digitalsamvad.org',
-    href: 'https://digitalsamvad.org',
-    logo: 'digital-samvad.png',
+    href: '/digital-samvad',
+    logo: 'digital-samvad.jpg',
     accent: 'from-purple-500 to-purple-700',
   },
   {
-    title: 'Startup & Idea Fest (2019–Present)',
+    title: 'Digital Nepal Conclave (2022–2025)',
     description:
-      'An annual, province-wide startup showcase that has grown from a regional pilot to a national movement spanning all seven provinces. Shortlisted startups compete in Kathmandu finals featuring bootcamps, mentoring, exhibitions, and the coveted ICT Award.',
-    website: 'startupnepal.org',
-    href: 'https://startupnepal.org',
-    logo: 'startup-idea-fest.png',
-    accent: 'from-red-500 to-red-700',
-    stats: '15,000+ attendees · 100+ startups showcased',
+      "Nepal's largest annual digital conference unites ministers, government officials, IT professionals, entrepreneurs, and academics to advance the Digital Nepal Framework. Each edition focuses on a forward-looking theme, bringing together 15+ international keynote speakers alongside hundreds of national delegates.",
+    website: 'digitalconclave.org',
+    href: '/digital-nepal-conclave',
+    logo: 'dnc-logo.png',
+    accent: 'from-blue-500 to-blue-700',
   },
   {
     title: 'Digital Karnali Conclave (2024–2025)',
     description:
       'Organized in collaboration with the Karnali Province Government to align local digital policies with national strategies. The 2025 edition in Birendranagar, Surkhet drew 500+ attendees and 50+ expert speakers.',
     website: 'digitalkarnali.org',
-    href: 'https://digitalkarnali.org',
-    logo: 'digital-karnali.png',
+    href: '/digital-karnali-conclave',
+    logo: 'dkc-logo.png',
     accent: 'from-teal-500 to-teal-700',
   },
   {
@@ -48,32 +38,42 @@ const initiatives = [
     description:
       'The inaugural edition, held in Bardibas, Mahottari, marked a significant step toward advancing Madhesh Province\'s digital agenda. Co-organized with the Ministry of Home Affairs, Communication & Law.',
     website: 'madhesh.digital',
-    href: 'https://madhesh.digital',
-    logo: 'digital-madhesh.png',
+    href: '/digital-madhesh-conclave',
+    logo: 'dmc-logo.png',
     accent: 'from-orange-500 to-orange-700',
+  },
+  {
+    title: 'ICT Award (2019–Present)',
+    description:
+      'Recognition program celebrating excellence in ICT innovation, implementation, and digital transformation in Nepal. Honoring innovators, entrepreneurs, organizations, and projects that demonstrate outstanding contributions to Nepal\'s digital future.',
+    href: '/ict-award',
+    logo: 'ict-award.png',
+    accent: 'from-cyan-500 to-cyan-700',
+  },
+  {
+    title: 'Startup & Idea Fest (2019–Present)',
+    description:
+      'An annual, province-wide startup showcase that has grown from a regional pilot to a national movement spanning all seven provinces. Shortlisted startups compete in Kathmandu finals featuring bootcamps, mentoring, exhibitions, and the coveted ICT Award.',
+    website: 'startupnepal.org',
+    href: '/startup-nepal',
+    logo: 'snif.png',
+    accent: 'from-red-500 to-red-700',
+    stats: '15,000+ attendees · 100+ startups showcased',
   },
   {
     title: 'ICT Gyan',
     description:
       'A digital literacy program that promotes technology education in native languages across Nepal, empowering students, local communities, and government representatives. 15 sessions conducted nationwide to date.',
-    href: '#initiatives',
-    logo: 'ict-gyan.png',
+    href: '/ict-gyan',
+    logo: 'ict-gyan-logo.png',
     accent: 'from-emerald-500 to-emerald-700',
-  },
-  {
-    title: 'Digital Literacy Campaign — Nagarik App (2024)',
-    description:
-      'Implemented across all seven provinces through 15 physical sessions, this campaign promotes citizen-centric digital services and drives public adoption of the Government of Nepal\'s Nagarik App.',
-    href: '#initiatives',
-    logo: 'nagarik-campaign.png',
-    accent: 'from-cyan-500 to-cyan-700',
   },
   {
     title: 'Digital Leadership Dialogue 1.0 & 2.0',
     description:
       'Two physical and seven virtual sessions organized ahead of the 2082 elections, engaging key stakeholders in conversations on digital policy and leadership.',
-    href: '#initiatives',
-    logo: 'digital-leadership.png',
+    href: '/digital-leadership-dialogue',
+    logo: 'dld-logo.png',
     accent: 'from-indigo-500 to-indigo-700',
   },
 ];
@@ -137,7 +137,7 @@ export default function InitiativesSection() {
         our initiatives span every province and reach every level of society.
       </p>
 
-      <div className="mb-14 overflow-hidden rounded-3xl bg-white shadow-sm">
+      {/* <div className="mb-14 overflow-hidden rounded-3xl bg-white shadow-sm">
         <div className="border-b border-gray-100 px-6 py-5">
           <h3 className="text-lg font-semibold text-body-text">Featured initiative logos</h3>
           <p className="mt-1 text-sm text-body-text/60">
@@ -186,7 +186,7 @@ export default function InitiativesSection() {
             @keyframes ifn-scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
           `}</style>
         </div>
-      </div>
+      </div> */}
 
       {/* Digital Nepal Conclave History Table */}
       {/* <div className="mb-14 overflow-hidden rounded-2xl bg-white shadow-sm">
@@ -242,14 +242,24 @@ export default function InitiativesSection() {
             className="card-hover group flex items-center justify-center overflow-hidden rounded-2xl bg-white shadow-sm p-6"
           >
             {init.logo ? (
-              <div className="h-20 w-full flex items-center justify-center">
-                <Image
-                  src={`/images/${init.logo}`}
-                  alt={init.title}
-                  width={320}
-                  height={120}
-                  className="object-contain"
-                />
+              <div className="h-30 w-full flex items-center justify-center">
+                <div className={
+                  init.title === 'ICT Gyan'
+                    ? 'w-38'
+                    : init.title === 'ICT Award (2019–Present)'
+                    ? 'w-45'
+                    : init.title === 'Digital Madhesh Conclave (2025)'
+                    ? 'w-64'
+                    : ''
+                }>
+                  <Image
+                    src={`/images/${init.logo}`}
+                    alt={init.title}
+                    width={200}
+                    height={100}
+                    className="object-contain w-full"
+                  />
+                </div>
               </div>
             ) : (
               <div className={`h-20 w-20 rounded-2xl bg-gradient-to-br ${init.accent} flex items-center justify-center text-2xl font-bold text-white`}>{String(i + 1)}</div>

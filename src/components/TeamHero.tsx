@@ -37,7 +37,7 @@ export default function TeamHero() {
   }, []);
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-slate-50 via-slate-100 to-white">
+    <section className="relative overflow-hidden bg-gradient-to-br from-slate-50 via-slate-100 to-white px-6 py-20">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(59,130,246,0.18),_transparent_32%),radial-gradient(circle_at_bottom_right,_rgba(227,56,49,0.15),_transparent_30%)] pointer-events-none" />
       <div className="mx-auto max-w-7xl px-6 py-20">
         <div className="grid items-center gap-10 lg:grid-cols-[1.1fr_0.9fr]">

@@ -1,9 +1,9 @@
-import { FaFacebookF, FaTwitter, FaLinkedinIn } from 'react-icons/fa';
-import { FaInstagram, FaX } from 'react-icons/fa6';
+import { FaFacebookF, FaTwitter, FaLinkedinIn, FaYoutube, FaInstagram } from 'react-icons/fa';
 import Fa from 'zod/v4/locales/fa.js';
+import Image from 'next/image';
 
 const initiativeLinks = [
-  { label: 'Digital Nepal Conclave', url: 'https://digitalconclave.org' },
+  { label: 'Digital Nepal Conclave', url: '/digital-nepal-conclave' },
   { label: 'Digital Samvad', url: 'https://digitalsamvad.org' },
   { label: 'Startup & Idea Fest', url: 'https://startupnepal.org' },
   { label: 'Digital Karnali Conclave', url: 'https://digitalkarnali.org' },
@@ -11,10 +11,9 @@ const initiativeLinks = [
 ];
 
 const quickLinks = [
-  { label: 'About Us', href: '/#about' },
+  { label: 'About Us', href: '/about-ifn' },
   { label: 'Programs & Initiatives', href: '/#initiatives' },
-  { label: 'Publications', href: '/#publications' },
-  { label: 'Our Reach', href: '/#reach' },
+  { label: 'Publications', href: '/publications' },
   { label: 'Collaborators', href: '/#collaborators' },
   { label: 'Contact', href: '/#contact' },
 ];
@@ -28,19 +27,32 @@ export default function Footer() {
         <div className="grid gap-10 md:grid-cols-4">
           {/* Organization */}
           <div className="md:col-span-1">
+            <div className="flex items-center gap-2 mb-2">
+                <Image 
+                  src="/images/logo-white.png" 
+                  alt="IFN Logo" 
+                  width={400} 
+                  height={120}
+                  priority
+                  className="h-20 w-auto"
+                />
+            </div>
             <h3 className="mb-4 text-xl font-bold">ICT Foundation Nepal</h3>
             <p className="mb-4 text-sm leading-relaxed text-white/55">
-              Driving Nepal&apos;s Digital Transformation through policy, innovation, and inclusive growth.
+              Reg. No: 261776/077/078
             </p>
-            <p className="text-sm text-white/55">New Baneshwor, Kathmandu, Nepal</p>
-            <a
+            {/* <p className="mb-4 text-sm leading-relaxed text-white/55">
+              Driving Nepal&apos;s Digital Transformation through policy, innovation, and inclusive growth.
+            </p> */}
+            <p className="text-sm text-white/55">Sankhamul, Kathmandu-31, Nepal</p>
+            {/* <a
               href="https://ictfoundation.org.np"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-1 inline-block text-sm text-primary-light hover:underline"
             >
               ictfoundation.org.np
-            </a>
+            </a> */}
           </div>
 
           {/* Quick Links */}
@@ -91,7 +103,7 @@ export default function Footer() {
             <p className="mb-5 text-sm text-white/55">Follow us on social media</p>
             <div className="flex gap-3">
               <a
-                href="https://facebook.com"
+                href="https://www.facebook.com/ICTFoundationNepal2026"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Facebook"
@@ -100,16 +112,16 @@ export default function Footer() {
                 <FaFacebookF className="h-4 w-4" />
               </a>
               <a
-                href="https://twitter.com"
+                href="https://www.instagram.com/ictfoundationnepal"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Twitter"
+                aria-label="Instagram"
                 className="flex h-10 w-10 items-center justify-center rounded-xl bg-white/5 text-white/50 transition-all hover:bg-white/10 hover:text-white"
               >
                 <FaInstagram className="h-4 w-4" />
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/company/ict-foundation-nepal"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
@@ -117,7 +129,20 @@ export default function Footer() {
               >
                 <FaLinkedinIn className="h-4 w-4" />
               </a>
+              <a
+                href="https://www.youtube.com/@ict.foundation"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="YouTube"
+                className="flex h-10 w-10 items-center justify-center rounded-xl bg-white/5 text-white/50 transition-all hover:bg-white/10 hover:text-white"
+              >
+                <FaYoutube className="h-4 w-4" />
+              </a>
+
             </div>
+            <p className="mb-5 text-sm text-white/55"></p>
+            <p className="mb-5 text-sm text-white/55">admin@ictfoundation.org.np <br /> razan@ictfoundation.org.np</p>
+            <p className="mb-5 text-sm text-white/55">+977-9851141348, +977-9801263604, +977-9801263601</p>
           </div>
         </div>
 
